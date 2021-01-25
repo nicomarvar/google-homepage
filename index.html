@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <style>
+        /*Main Page*/
+      html{width:100%; height:100%;}
+      body{
+          margin:0 0 0 0;
+
+          font-family: Open Sans;
+      }
+      /*Grid Container*/
+      .container{
+          display:grid;
+          grid-template-rows:5vh 90vh 5vh;
+          grid-template-columns:100%;
+          grid-template-areas: 
+           "header"
+           "nav"
+           "footer";          ;
+      }
+      /*Header*/
+      .header-bar{
+          grid-area: "header";
+          background-color:lightgray;
+          display:flex;
+          flex-direction: row;
+      }
+      .left-buttons{
+          background: darkseagreen;
+          width: 50vw;
+          display: flex;
+          padding-top:15px;
+          padding-left: 40px;
+      }
+      .left-buttons div{
+          margin: 0 10px 0 0;
+      }
+
+      .right-buttons{
+          background:darkolivegreen;
+          display: flex;
+          width: 50vw;
+          justify-content: flex-end;     
+      }
+      .right-buttons div{
+          margin:15px 0 0 10px;
+      }
+      .right-buttons button{
+          margin-left: 10px;
+          margin-bottom: 5px;
+          margin-top: 10px;
+          margin-right: 40px;
+          background: #4285f4;
+          border-style:none;
+          color:white;
+          padding:-2px;
+          border-radius: 2px;
+          font-family:arial;
+          font-weight:bolder;
+          width:70px;
+      }
+      /*Main*/
+      .nav-body{
+          grid-area: "nav";
+          background-color: gray;
+                }
+      /*Footer*/
+      .footer-bar{
+          grid-area:"footer";
+          background-color: black;
+      }
+
+      </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="header-bar">
+               <div class="left-buttons"><div>About</div> <div>Store</div></div>
+               <div class="right-buttons"><div>Gmail</div> <div>Images</div> <div>Square</div><button>Sign in</button></div>
+
+            </div>
+            <div class="nav-body"></div>
+            <div class="footer-bar"></div>
+        </div>
+    </main>
+</body>
+</html>
