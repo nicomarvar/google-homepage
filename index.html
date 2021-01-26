@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Google</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
     <style>
@@ -8,7 +9,7 @@
       html{width:100%;}
       body{
           margin:0 0 0 0;
-
+        color: rgb(37, 33, 33);
           font-family: Open Sans;
       }
       /*Grid Container*/
@@ -80,11 +81,6 @@
           height: 100px;
           width:auto;
       }
-      /*Footer*/
-      .footer-bar{
-          grid-area:"footer";
-          background-color: black;
-      }
       .Search-Bar{
           border-radius: 30px;
           border-style:solid;
@@ -92,8 +88,8 @@
           border-width: 1px;
           background-color: white;
           width: 500px;
-          height: 40px;
-          margin-top: 30px;
+          height: 30px;
+          margin-top: 25px;
           display: flex;
           flex-direction: row;
           justify-content: start;
@@ -105,6 +101,54 @@
           border-style: none;
           background-color: white;
       }
+      form{
+          display: flex;
+          flex-direction: row;
+          margin-top: 15px;
+      }
+      form button{
+          display: flex;
+          margin:15px;
+          margin-left: 5px;
+          margin-right: 5px;
+          padding-left: 15px;
+          padding-right: 15px;
+          height: 30px;
+          align-items: center;
+          border-style: none;
+          background-color: #f8f9fa;
+          font-size: small;
+          font-style: normal;
+                }
+      /*Footer*/
+      .footer-bar{
+          grid-area:"footer";
+          background-color: #f8f9fa;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 40px;
+          color:rgba(0,0,0,.54);
+          font-weight: bold;
+          font-size: smaller;
+      }
+      .footer-bar a{
+          margin-left: 15px;
+          margin-right: 15px;
+      }
+      .Text-Left{
+          width: 50vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+      }
+      .Text-Right{
+          width: 50vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+      }
+      
       </style>
 </head>
 <body>
@@ -116,14 +160,20 @@
             </div>
             <div class="nav-body">
                  <img src="./Images/Logo/googlelogo_color_272x92dp.png">
-                 <form>
+                 
                      <div class="Search-Bar">
                          <img src="./Images/Icon/search_glass.png" style="width:15px;height:15px;display:flex;margin-left: 15px;">
                          <input type="text">
                      </div>
+                     <form>
+                     <button class="Search">Google Search</button>
+                     <button class="Lucky">I'm Feeling Lucky</button>
                  </form>
             </div>
-            <div class="footer-bar"></div>
+            <div class="footer-bar">
+                <div class="Text-Left"><a>Advertising</a><a>Business</a><a>How Search Works</a></div>
+                <div class="Text-Right"><a>Privacy</a><a>Terms</a><a>Settings</a></div>
+            </div>
         </div>
     </main>
 </body>
